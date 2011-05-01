@@ -18,9 +18,12 @@ PRODUCT_BRAND := LGE
 PRODUCT_DEVICE := thunderg
 PRODUCT_MODEL := LG-P509
 PRODUCT_MANUFACTURER := LGE
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=thunderg BUILD_ID=FRF91 BUILD_DISPLAY_ID=GRI40 BUILD_FINGERPRINT=LGE/thunderg/thunderg/thunderg:2.2/FRF91/eng.nedbal19.park.20101024.190216:user/release-keys PRIVATE_BUILD_DESC="thunderg-user 2.2 FRF91 eng.nedbal19.park.20101024.190216 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=thunderg BUILD_ID=GRI40 BUILD_DISPLAY_ID=GRI40 BUILD_FINGERPRINT=google/passion/passion:2.3.3/GRI40/102588:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.3.3 GRI40 102588 release-keys"
 
 PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/vendor/cyanogen/prelink-linux-arm-msm722x.map
+
+# Build GanOptimizer
+PRODUCT_PACKAGES += GanOptimizer
 
 # Live wallpaper packages
 PRODUCT_PACKAGES += \
@@ -37,10 +40,10 @@ ifdef CYANOGEN_NIGHTLY
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.0.0-RC4-Thunderg
+            ro.modversion=CyanogenMod-7.0.2-Thunderg
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.0.0-RC4-Thunderg-KANG
+            ro.modversion=CyanogenMod-7.0.2-Thunderg-KANG
     endif
 endif
 

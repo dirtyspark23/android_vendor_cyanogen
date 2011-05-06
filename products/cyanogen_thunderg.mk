@@ -22,6 +22,13 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=thunderg BUILD_ID=GRJ22 BUILD_DISPL
 
 PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/vendor/cyanogen/prelink-linux-arm-msm722x.map
 
+# Live wallpaper packages
+PRODUCT_PACKAGES += \
+        LiveWallpapers \
+        LiveWallpapersPicker \
+        MagicSmokeWallpapers \
+        VisualizationWallpapers
+
 # Build GanOptimizer
 PRODUCT_PACKAGES += GanOptimizer
 
@@ -42,4 +49,3 @@ endif
 
 PRODUCT_COPY_FILES +=  \
     vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
-

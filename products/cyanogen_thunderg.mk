@@ -7,7 +7,7 @@ $(call inherit-product, vendor/cyanogen/products/common_full.mk)
 # Include GSM stuff
 $(call inherit-product, vendor/cyanogen/products/gsm.mk)
 
-# Include FM-Radio stuff (does not work at this moment)
+# Include FM-Radio stuff
 $(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
 
 #
@@ -40,10 +40,10 @@ ifdef CYANOGEN_NIGHTLY
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-Thunderg
+            ro.modversion=CyanogenMod-7.0.3-Thunderg
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-Thunderg-KANG
+            ro.modversion=CyanogenMod-7.0.3-Thunderg-KANG
     endif
 endif
 

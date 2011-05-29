@@ -17,6 +17,17 @@ PRODUCT_MODEL := GT-S5830
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=soju BUILD_ID=GRJ22 BUILD_DISPLAY_ID=GRJ22 BUILD_FINGERPRINT=google/soju/crespo:2.3.4/GRJ22/121341:user/release-keys PRIVATE_BUILD_DESC="soju-user 2.3.4 GRJ22 121341 release-keys"
 
+PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/vendor/cyanogen/prelink-linux-arm-msm722x.map
+
+# Live wallpaper packages
+PRODUCT_PACKAGES += \
+        LiveWallpapers \
+        LiveWallpapersPicker \
+        MagicSmokeWallpapers \
+        VisualizationWallpapers
+
+CYANOGEN_NIGHTLY := true
+
 # Build kernel
 #PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-samsung
@@ -24,9 +35,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=soju BUILD_ID=GRJ22 BUILD_DISPLAY_I
 
 # Extra galaxys overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/acemtd
-
-# Add the FM app
-# PRODUCT_PACKAGES += FM
 
 # Extra RIL settings
 PRODUCT_PROPERTY_OVERRIDES += \

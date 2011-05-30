@@ -33,9 +33,6 @@ CYANOGEN_NIGHTLY := true
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-samsung
 #PRODUCT_SPECIFIC_DEFINES += #TARGET_KERNEL_CONFIG=cyanogen_vibrantmtd_defconfig
 
-# Extra galaxys overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/acemtd
-
 # Extra RIL settings
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.enable.managed.roaming=1 \

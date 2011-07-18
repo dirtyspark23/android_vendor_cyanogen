@@ -1,10 +1,8 @@
-$(call inherit-product, build/target/product/full_base.mk)
+# Inherit AOSP device configuration for legend.
+$(call inherit-product, device/lge/thunderc/device_thunderc.mk)
 
 # Inherit some common cyanogenmod stuff.
 $(call inherit-product, vendor/cyanogen/products/common_full.mk)
-
-# Inherit AOSP device configuration for legend.
-$(call inherit-product, device/lge/thunderc/device_thunderc.mk)
 
 # Include FM-Radio stuff (does not work at this moment)
 $(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
@@ -23,7 +21,7 @@ PRODUCT_PACKAGES += \
         MagicSmokeWallpapers \
         VisualizationWallpapers
 
-#CYANOGEN_NIGHTLY := true
+CYANOGEN_NIGHTLY := true
 
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
